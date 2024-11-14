@@ -7,7 +7,7 @@
 
 body {
     background-color: #f4f4f9;
-    color: #333;
+    color: #222121;
     line-height: 1.6;
     animation: fadeIn 2s ease-in-out;
 
@@ -163,7 +163,7 @@ button.cta {
 
 
 footer {
-    background-color: #343a40;
+    background-color: #333436;
     color: #fff;
     text-align: center;
     padding: 10px 0;
