@@ -1,3 +1,4 @@
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +11,9 @@ body {
     color: #222121;
     line-height: 1.6;
     animation: fadeIn 2s ease-in-out;
-
 }
 
-
+/* Animación de desvanecimiento al cargar la página */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -24,22 +24,7 @@ body {
     }
 }
 
-
-header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px 0;
-    animation: slideIn 1s ease-in-out;
-
-}
-
-header .logo h1 {
-    margin-left: 20px;
-    font-size: 2rem;
-    animation: colorChange 3s infinite alternate;
-
-}
-
+/* Animación del encabezado (deslizar desde arriba) */
 @keyframes slideIn {
     from {
         transform: translateY(-50px);
@@ -52,6 +37,7 @@ header .logo h1 {
     }
 }
 
+/* Animación para el cambio de color en el logo */
 @keyframes colorChange {
     0% {
         color: #f39c12;
@@ -62,7 +48,62 @@ header .logo h1 {
     }
 }
 
+/* Animación de los botones (rebote) */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
 
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de las secciones (deslizar desde abajo) */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de los enlaces de navegación (fade-in) */
+@keyframes navLinkFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos generales */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+header .logo h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+    animation: colorChange 3s infinite alternate;
+}
+
+/* Estilos del menú de navegación */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -72,8 +113,9 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
-    animation: fadeIn 2s ease-in-out;
-
+    animation: navLinkFade 1s ease-out;
+    animation-delay: 0.2s;
+    /* Añadir un pequeño retraso para que se animen uno por uno */
 }
 
 nav ul li a {
@@ -87,11 +129,35 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
+/* Animación para la barra de navegación */
+nav ul li:nth-child(1) {
+    animation-delay: 0.3s;
+}
 
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+nav ul li:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+nav ul li:nth-child(6) {
+    animation-delay: 0.8s;
+}
+
+/* Secciones principales (Animación deslizante) */
 main {
     padding: 20px;
 }
-
 
 section {
     background-color: #fff;
@@ -100,19 +166,6 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     animation: slideUp 1s ease-in-out;
-
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 section h2 {
@@ -136,32 +189,14 @@ button.cta {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
+    animation: bounce 1s ease-in-out infinite alternate;
 }
 
 button.cta:hover {
     background-color: #e67e22;
 }
 
-
-button.cta {
-    animation: bounce 1s ease-in-out infinite alternate;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
+/* Pie de página con animación */
 footer {
     background-color: #333436;
     color: #fff;
@@ -169,10 +204,9 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
     animation: fadeIn 2s ease-in-out;
-
 }
 
-
+/* Responsividad */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

@@ -7,69 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INVEX - Sistema de Gestión de Inventarios</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="INVEX (1).png" width="250px">
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="INVEX (1).png" width="250px" alt="Logo">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#inventario">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#reportes">Reportes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#compras">Compras</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#ventas">Ventas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#ajustes">Ajustes</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href=" #dashboard">Dashboard</a></li>
-                <li><a href="#inventario">Inventario</a></li>
-                <li><a href="#reportes">Reportes</a></li>
-                <li><a href="#compras">Compras</a></li>
-                <li><a href="#ventas">Ventas</a></li>
-                <li><a href="#ajustes">Ajustes</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="container py-5">
         <section id="dashboard">
-            <h2>Panel de Control</h2>
-            <p>Bienvenido al sistema de gestión de inventarios INVEX. Aquí podrás gestionar tu inventario en
-                tiempo real, generar reportes, realizar compras y ventas, y mucho más.</p>
+            <h2 class="mb-4">Panel de Control</h2>
+            <p>Bienvenido al sistema de gestión de inventarios INVEX. Aquí podrás gestionar tu inventario en tiempo
+                real, generar reportes, realizar compras y ventas, y mucho más.</p>
         </section>
 
-        <section id="inventario">
-            <h2>Gestión de Inventario</h2>
+        <section id="inventario" class="bg-white p-4 rounded shadow-sm mb-4">
+            <h2 class="mb-3">Gestión de Inventario</h2>
             <p>Monitoreo en tiempo real de productos, entradas y salidas, alertas de stock bajo, y gestión de
                 vencimientos.</p>
-            <button class="cta">Ver Inventario</button>
+            <button class="btn btn-warning">Ver Inventario</button>
         </section>
 
-        <section id="reportes">
-            <h2>Generación de Reportes</h2>
+        <section id="reportes" class="bg-white p-4 rounded shadow-sm mb-4">
+            <h2 class="mb-3">Generación de Reportes</h2>
             <p>Accede a reportes detallados sobre el movimiento de inventario, ventas, pérdidas y mucho más.</p>
-            <button class="cta">Ver Reportes</button>
+            <button class="btn btn-warning">Ver Reportes</button>
         </section>
 
-        <section id="compras">
-            <h2>Gestión de Compras</h2>
-            <p>Realiza compras basadas en niveles de stock, proveedores y presupuesto. Con integración a otros
-                sistemas.
+        <section id="compras" class="bg-white p-4 rounded shadow-sm mb-4">
+            <h2 class="mb-3">Gestión de Compras</h2>
+            <p>Realiza compras basadas en niveles de stock, proveedores y presupuesto. Con integración a otros sistemas.
             </p>
-            <button class="cta">Gestionar Compras</button>
+            <button class="btn btn-warning">Gestionar Compras</button>
         </section>
 
-        <section id="ventas">
-            <h2>Gestión de Ventas</h2>
+        <section id="ventas" class="bg-white p-4 rounded shadow-sm mb-4">
+            <h2 class="mb-3">Gestión de Ventas</h2>
             <p>Realiza ventas de forma eficiente con acceso a disponibilidad de productos en tiempo real.</p>
-            <button class="cta">Ver Ventas</button>
+            <button class="btn btn-warning">Ver Ventas</button>
         </section>
 
-        <section id="ajustes">
-            <h2>Ajustes y Configuración</h2>
+        <section id="ajustes" class="bg-white p-4 rounded shadow-sm mb-4">
+            <h2 class="mb-3">Ajustes y Configuración</h2>
             <p>Personaliza roles, permisos y notificaciones del sistema según las necesidades de tu empresa.</p>
-            <button class="cta">Configurar Sistema</button>
+            <button class="btn btn-warning">Configurar Sistema</button>
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 INVEX | Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
